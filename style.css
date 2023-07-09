@@ -282,6 +282,35 @@ h2, p {
     margin-top: 80px;
   }
 
+  .product-details-description, .product-details-update
+  {
+    margin-left: -5%;
+  }
+
+  .product-details-updatetime
+  {
+    text-align: left;
+  }
+
+  .product-card-overlay .product-details, .product-details-updatetime, .product-details-ps {
+    padding: 20px;
+  }
+
+  .button-group-overlay
+  {
+    margin-left: 10%;
+    width: 100%;
+  }
+
+  .product-card-overlay .product-image {
+    margin: 0;
+  }
+
+  .product-card-overlay img {
+    margin-bottom: 10px;
+    margin-top: 20%;
+  }
+
   .product-card-overlay {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
