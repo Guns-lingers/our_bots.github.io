@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Моя первая HTML страница</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Наши боты</title>
 </head>
 <body>
-  <h1>Привет, мир!</h1>
-  <p>Это моя первая HTML страница.</p>
+  <h1>Наши боты</h1>
+  <div class="product-container">
+    <div class="product-card">
+      <img src="img/1422443363_647565369.jpg" alt="Сосистер Бит">
+      <h2>Сосистер Бит</h2>
+      <p>Бот для воспроизведения музыки с платформы YouTube</p>
+      <div class="button-group">
+        <button onclick="showDetails()">Подробнее</button>
+        <button onclick="addToCart()">Добавить на Discord сервер</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+  <img src="img/coming-soon-lettering-for-t-shirt_623665-372.jpg" alt="Coming Soon">
+    </div>
+
+</div>
+
+
+  <div id="overlay" onclick="hideDetails()"></div>
+  <div id="details-container">
+    <div class="product-card-overlay details-card">
+      <span class="close-btn" onclick="hideDetails()">&#10005;</span>
+      <div class="product-details">
+        <h2>Сосистер Бит</h2>
+        <p>Бот для воспроизведения музыки с платформы YouTube</p>
+        <div class="button-group">
+          <button onclick="addToCart()">Добавить на Discord сервер</button>
+        </div>
+      </div>
+      <div class="product-image">
+        <img src="img/1422443363_647565369.jpg" alt="Сосистер Бит">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    function showDetails() {
+      document.getElementById("overlay").style.display = "block";
+      document.getElementById("details-container").style.display = "flex";
+    }
+
+    function hideDetails() {
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("details-container").style.display = "none";
+    }
+
+    function addToCart() {
+      // Открыть ссылку в новой вкладке
+      window.open('https://discord.com/api/oauth2/authorize?client_id=780779336088944661&permissions=3403072&scope=bot', '_blank');
+    }
+  </script>
 </body>
 </html>

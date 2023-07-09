@@ -1,0 +1,330 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom right, #3B3B3B 0%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: auto;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 42px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2, p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 24px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 200px auto 20px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.product-card {
+  background-color: #262626;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card:hover {
+  transform: scale(1.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.product-card button {
+  background-color: #ff9933;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.product-card button:hover {
+  background-color: #ff6600;
+}
+
+
+
+
+.product-card-overlay {
+  background-color: #262626;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: row-reverse; /* Изменено значение на row-reverse */
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card-overlay .product-details {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+.product-card-overlay .product-image {
+  flex: 1;
+  padding: 10px;
+  text-align: right;
+}
+
+.product-card-overlay img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card-overlay h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.product-card-overlay p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.product-card-overlay button {
+  background-color: #ff9933;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.product-card-overlay button:hover {
+  background-color: #ff6600;
+}
+
+
+
+
+
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+}
+
+#details-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  display: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #ff6600;
+  cursor: pointer;
+}
+
+.details-card {
+  width: 1000px;
+  height: 500px;
+}
+
+/* Стили для мобильных устройств (ширина экрана до 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+    margin-top: 50px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}
+
+/* Стили для планшетов и небольших ноутбуков (ширина экрана от 481px до 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+    margin-top: 80px;
+  }
+
+  .product-card {
+    width: 45%;
+  }
+}
+
+/* Стили для больших экранов (ширина экрана больше 1024px) */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 42px;
+    margin-top```css
+    h1 {
+      font-size: 42px;
+      margin-top: 100px;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 200px auto 20px;
+      padding-bottom: 100px;
+      box-sizing: border-box;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-card:hover {
+      transform: scale(1.1);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .product-card button {
+      background-color: #ff9933;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: fit-content;
+      margin-top: 10px;
+    }
+
+    .product-card button:hover {
+      background-color: #ff6600;
+    }
+
+    /* Общие стили */
+
+    /* Стили для мобильных устройств (ширина экрана до 480px) */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+        margin-top: 50px;
+      }
+
+      .product-card {
+        width: 100%;
+      }
+    }
+
+    /* Стили для планшетов и небольших ноутбуков (ширина экрана от 481px до 1024px) */
+    @media (min-width: 481px) and (max-width: 1024px) {
+      h1 {
+        font-size: 36px;
+        margin-top: 80px;
+      }
+
+      .product-card {
+        width: 45%;
+      }
+    }
+
+    /* Стили для больших экранов (ширина экрана больше 1024px) */
+    @media (min-width: 1025px) {
+      h1 {
+        font-size: 42px;
+        margin-top: 100px;
+      }
+
+      .product-card {
+        width: 300px;
+      }
+    }
