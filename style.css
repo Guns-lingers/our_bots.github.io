@@ -168,6 +168,11 @@ h2, p {
   justify-content: flex-end;
 }
 
+.button-group
+{
+    margin-bottom: 15%;
+}
+
 .product-card-overlay button {
   background-color: #ff9933;
   color: #fff;
