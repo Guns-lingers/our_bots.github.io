@@ -92,7 +92,6 @@ h2, p {
   background-color: #ff6600;
 }
 
-
 .product-card-overlay {
   background-color: #262626;
   border-radius: 5px;
@@ -104,6 +103,7 @@ h2, p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 
 .product-card-overlay .product-details {
@@ -112,43 +112,37 @@ h2, p {
 }
 
 .product-card-overlay .product-details-text {
-/*  display: flex; /* Добавлена новая строка */*/
-  align-items: center; /* Добавлена новая строка */
+  align-items: center;
   margin-bottom: -50px;
 }
 
-.product-details-updatetime
-{
-    text-align: right;
-    padding-right: 40px;
-    margin-top: -13%;
+.product-details-updatetime {
+  text-align: right;
+  padding-right: 40px;
+  margin-top: -13%;
 }
 
-
-.product-details-update
-{
-    text-align: left;
-    padding-left: 40px;
-    margin-top: 3%;
+.product-details-update {
+  text-align: left;
+  padding-left: 40px;
+  margin-top: 3%;
 }
 
-.product-details-ps
-{
-    text-align: left;
-    padding-left: 40px;
-    margin-top: 5%;
+.product-details-ps {
+  text-align: left;
+  padding-left: 40px;
+  margin-top: 5%;
 }
 
-.product-details-description
-{
-    text-align: left;
-    padding-left: 40px;
-    margin-top: -10%;
+.product-details-description {
+  text-align: left;
+  padding-left: 40px;
+  margin-top: -10%;
 }
 
 .product-card-overlay .product-image {
   text-align: right;
-  margin-left: 10px; /* Добавлена новая строка */
+  margin-left: 10px;
 }
 
 .product-card-overlay img {
@@ -185,6 +179,12 @@ h2, p {
   margin-top: 10px;
   margin-bottom: 25px;
   margin-right: 40px;
+}
+
+.button-group-overlay
+{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .product-card-overlay button:hover {
@@ -225,55 +225,87 @@ h2, p {
   height: 500px;
 }
 
+/* Общие стили */
 
-    /* Общие стили */
+/* Стили для мобильных устройств (ширина экрана до 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+    margin-top: 50px;
+  }
 
-    /* Стили для мобильных устройств (ширина экрана до 480px) */
-@media (max-width: 480px)
-{
-    h1 {
-        font-size: 28px;
-        margin-top: 50px;
-    }
+  .product-card,
+  .product-card-overlay {
+    width: 100%;
+  }
 
-    .product-card, .product-card-overlay{
-        width: 100%;
-    }
+  .product-card-overlay {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 80vh; /* Ограничиваем максимальную высоту */
+  }
 
-    .product-card-overlay .product-details {
-        padding: 20px;
-      }
+  .product-details-description, .product-details-update
+  {
+    margin-left: -10%;
+  }
 
-      .product-card-overlay .product-image {
-        margin: 0;
-      }
+  .product-details-updatetime
+  {
+    text-align: left;
+  }
 
-      .product-card-overlay img {
-        margin-bottom: 10px;
-      }
+  .product-card-overlay .product-details, .product-details-updatetime, .product-details-ps {
+    padding: 20px;
+  }
+
+  .button-group-overlay
+  {
+    margin-left: 10%;
+    width: 100%;
+  }
+
+  .product-card-overlay .product-image {
+    margin: 0;
+  }
+
+  .product-card-overlay img {
+    margin-bottom: 10px;
+    margin-top: 35%;
+  }
 }
 
-    /* Стили для планшетов и небольших ноутбуков (ширина экрана от 481px до 1024px) */
-@media (min-width: 481px) and (max-width: 1024px)
-{
-    h1 {
+/* Стили для планшетов и небольших ноутбуков (ширина экрана от 481px до 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  h1 {
     font-size: 36px;
     margin-top: 80px;
-    }
+  }
 
-    .product-card {
-        width: 45%;
-    }
+  .product-card-overlay {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 80vh; /* Ограничиваем максимальную высоту */
+  }
+
+  .product-card-overlay {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-    /* Стили для больших экранов (ширина экрана больше 1024px) */
+/* Стили для больших экранов (ширина экрана больше 1024px) */
 @media (min-width: 1025px) {
-    h1 {
-        font-size: 42px;
-        margin-top: 100px;
-    }
+  h1 {
+    font-size: 42px;
+    margin-top: 100px;
+  }
 
-    .product-card {
-        width: 300px;
-    }
+  .product-card-overlay {
+    overflow-y: hidden; /* Скрываем скролл */
+  }
+
+  .product-card {
+    width: 300px;
+  }
 }
