@@ -276,7 +276,7 @@ h2, p {
 }
 
 /* Стили для планшетов и небольших ноутбуков (ширина экрана от 481px до 1024px) */
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 650px) {
   h1 {
     font-size: 36px;
     margin-top: 80px;
@@ -322,6 +322,54 @@ h2, p {
     height: 100%;
   }
 }
+
+@media (min-width: 651px) and (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+    margin-top: 80px;
+  }
+
+  .product-details-description, .product-details-update {
+    margin-left: -5%;
+  }
+
+  .product-details-updatetime {
+    text-align: left;
+  }
+
+  .product-card-overlay .product-details, .product-details-updatetime, .product-details-ps {
+    padding: 20px;
+  }
+
+  .button-group-overlay {
+    margin-left: 10%;    
+    display: flex; /* Добавьте свойство display: flex; */
+    justify-content: center; /* Добавьте свойство justify-content: center; */
+  }
+
+  .product-card-overlay .product-image {
+    margin: 0;
+    float: left; /* Добавьте свойство float: left; */
+  }
+
+  .product-card-overlay img {
+    margin-bottom: 10%;
+    margin-top: 20%;
+    object-fit: contain;
+  }
+
+  .product-card-overlay {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 80vh;
+  }
+
+  .product-card-overlay {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
 /* Стили для больших экранов (ширина экрана больше 1024px) */
 @media (min-width: 1025px) {
