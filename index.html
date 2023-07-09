@@ -19,53 +19,46 @@
     </div>
 
     <div class="product-card">
-  <img src="img/coming-soon-lettering-for-t-shirt_623665-372.jpg" alt="Coming Soon">
-    </div>
-
-</div>
-
-
-<div id="overlay" onclick="hideDetails()"></div>
-<div id="details-container">
-  <div class="product-card-overlay details-card">
-    <span class="close-btn" onclick="hideDetails()">&#10005;</span>
-    <div class="product-details">
-      <div class="product-details-text">
-        <h2>Сосистер Бит</h2>
-        <p>Бот для воспроизведения музыки с платформы YouTube</p>
-      </div>
-      <div class="product-image">
-        <img src="img/1422443363_647565369.jpg" alt="Сосистер Бит">
-      </div>
-    </div>
-    <div class="product-details-description">
-      <h2>Описание:</h2>
-      <p>Бот может воспроизводить музыка по ссылке с платформы YouTube.</p>
-      <p>Может осуществлять поиск, а так же воспроизводить свои сохраненные плей-листы.</p>
-      <p>Есть возможность создавать свои плей-листы,<br> которые будут работать на всех серверах где есть данный бот.</p>
-    </div>
-    <div class="product-details-update">
-      <h2>Что нового добавлено:</h2>
-      <p>*Добавлена возможность скачивание композиций с платформы YouTube.</p>
-    </div>
-    <div class="product-details-updatetime">
-      <h2>Последнее обновление:</h2>
-      <p>8 Июля 2023г.</p>
-    </div>
-    <br>
-    <div class="product-details-ps">
-      <p style="font-size: 10px;">*Размер файла не должен превышеть 8Мб</p>
-    </div>
-    <div class="button-group">
-      <button onclick="addToCart()">Добавить на Discord сервер</button>
+      <img src="img/coming-soon-lettering-for-t-shirt_623665-372.jpg" alt="Coming Soon">
     </div>
   </div>
-</div>
 
-
-
-
-
+  <div id="overlay" onclick="hideDetails()"></div>
+  <div id="details-container">
+    <div class="product-card-overlay details-card">
+      <span class="close-btn" onclick="hideDetails()">&#10005;</span>
+      <div class="product-details">
+        <div class="product-details-text">
+          <h2>Сосистер Бит</h2>
+          <p>Бот для воспроизведения музыки с платформы YouTube</p>
+        </div>
+        <div class="product-image">
+          <img src="img/1422443363_647565369.jpg" alt="Сосистер Бит">
+        </div>
+      </div>
+      <div class="product-details-description">
+        <h2>Описание:</h2>
+        <p>Бот может воспроизводить музыку по ссылке с платформы YouTube.</p>
+        <p>Может осуществлять поиск, а также воспроизводить свои сохраненные плей-листы.</p>
+        <p>Есть возможность создавать свои плей-листы,<br> которые будут работать на всех серверах, где есть данный бот.</p>
+      </div>
+      <div class="product-details-update">
+        <h2>Что нового добавлено:</h2>
+        <p>*Добавлена возможность скачивания композиций с платформы YouTube.</p>
+      </div>
+      <div class="product-details-updatetime">
+        <h2>Последнее обновление:</h2>
+        <p>8 Июля 2023г.</p>
+      </div>
+      <br>
+      <div class="product-details-ps">
+        <p style="font-size: 10px;">*Размер файла не должен превышать 8Мб</p>
+      </div>
+      <div class="button-group">
+        <button onclick="addToCart()">Добавить на Discord сервер</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     function showDetails() {
@@ -82,6 +75,12 @@
       // Открыть ссылку в новой вкладке
       window.open('https://discord.com/api/oauth2/authorize?client_id=780779336088944661&permissions=3403072&scope=bot', '_blank');
     }
+
+    function showAlert() {
+      alert("ВНИМАНИЕ! Наш сайт на текущий момент не адаптирован под мобильные устройства. Убедительная просьба использовать Desktop версию.");
+    }
+
+    showAlert(); // Вызов функции showAlert при загрузке страницы
   </script>
 </body>
 </html>
