@@ -260,7 +260,7 @@ h2, p {
     text-align: left;
   }
 
-  .product-card-overlay .product-details, .product-details-updatetime, .product-details-ps {
+  .product-card-overlay .product-details, .product-details-updatetime {
     padding: 20px;
   }
 
